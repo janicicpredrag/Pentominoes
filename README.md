@@ -40,3 +40,8 @@ given in `Solvers/lean-toolchain`).
 Predrag Janičić, Faculty of Mathematics, University of Belgrade.
 The software was developed with the AI assistant Claude (Anthropic), used
 through Claude Code, in an interactive process guided by the author.
+
+## Licence
+
+This work is licensed under the Creative Commons Attribution-NoDerivatives
+4.0 International licence (CC BY-ND 4.0); see `LICENSE`.

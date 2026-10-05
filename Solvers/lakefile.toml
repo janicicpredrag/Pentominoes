@@ -1,0 +1,30 @@
+# One Lean project for both games.
+#   Pentomino.lean            pieces, placements and the rules of the drafting game (shared)
+#   drafting/                 formal proof of the solution of the draft, brute-force check
+#   nodrafting/               the rules of the no-drafting game, checker for small instances
+name = "pentominoes"
+version = "0.1.0"
+defaultTargets = ["Pentomino", "DraftProof", "NoDraft", "draftcheck", "ndcheck"]
+
+[[lean_lib]]
+name = "Pentomino"
+
+[[lean_lib]]
+name = "DraftProof"
+srcDir = "drafting"
+roots = ["DraftWin", "DraftTable", "Pentomino8x8"]
+
+[[lean_lib]]
+name = "NoDraft"
+srcDir = "nodrafting"
+roots = ["NoDraft"]
+
+[[lean_exe]]
+name = "draftcheck"
+srcDir = "drafting"
+root = "DraftCheck"
+
+[[lean_exe]]
+name = "ndcheck"
+srcDir = "nodrafting"
+root = "NdCheck"
